@@ -53,7 +53,7 @@ class StandSettings(models.Model):
 
 class ParkingSettings(models.Model):
     """Parking"""
-    tariffID = models.IntegerField(default=714811)
+    tariff_id = models.IntegerField(default=714811)
 
     """info for check"""
     money_day = models.IntegerField(default=1000)

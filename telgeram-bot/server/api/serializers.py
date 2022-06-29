@@ -5,13 +5,13 @@ from .models import Parking, ParkingSettings, Stand, StandSettings
 class StandSettingsSerializer(serializers.ModelSerializer):
     class Meta:
         model = StandSettings
-        fields = '__all__'
+        exclude = ('id', )
 
 
 class ParkingSettingsSerializer(serializers.ModelSerializer):
     class Meta:
         model = ParkingSettings
-        fields = '__all__'
+        exclude = ('id', )
 
 
 class StandSerializer(serializers.ModelSerializer):
@@ -19,7 +19,7 @@ class StandSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Stand
-        fields = '__all__'
+        exclude = ('id', )
 
 
 class ParkingSerializer(serializers.ModelSerializer):
@@ -30,4 +30,4 @@ class ParkingSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Parking
-        fields = '__all__'
+        exclude = ('id', )

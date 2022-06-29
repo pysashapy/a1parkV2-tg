@@ -29,11 +29,11 @@ class StandSettingsAdmin(admin.ModelAdmin):
 
 @admin.register(ParkingSettings)
 class ParkingSettingsAdmin(admin.ModelAdmin):
-    list_display = ('tariffID', 'money_day', 'money_h')
+    list_display = ('tariff_id', 'money_day', 'money_h')
 
     fieldsets = (
         (None, {
-            'fields': ('tariffID',)
+            'fields': ('tariff_id',)
         }),
         ('Cash', {
             'fields': (('money_day', 'money_h'),)
