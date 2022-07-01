@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from .models import Parking, ParkingSettings, Stand, StandSettings
+from rest_framework.fields import SerializerMethodField
+
+from .models import Parking, ParkingSettings, Stand, StandSettings, ParkingNotification
 
 
 class StandSettingsSerializer(serializers.ModelSerializer):
@@ -31,3 +33,14 @@ class ParkingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Parking
         exclude = ('id', )
+
+
+class NotificationSerializer(serializers.ModelSerializer):
+    id_parking = SerializerMethodField()
+
+    class Meta:
+        model = ParkingNotification
+        fields = ('message', 'id_parking')
+
+    def get_id_parking(self, obj):
+        return obj.parking.id_parking

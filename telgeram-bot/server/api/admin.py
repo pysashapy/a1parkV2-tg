@@ -76,5 +76,10 @@ class ParkingAdmin(admin.ModelAdmin):
     )
 
 
+@admin.register(ParkingNotification)
+class ParkingNotificationAdmin(admin.ModelAdmin):
+    list_display = ('parking', 'message')
+
+
 admin.site.register(MainToken)
 admin.site.register(UserToken)

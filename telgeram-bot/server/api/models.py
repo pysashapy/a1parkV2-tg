@@ -72,6 +72,8 @@ class Stand(models.Model):
     login = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
 
+    path_manage = models.CharField(max_length=255, default='~/a1parkV2-stand/manage.py')
+
 
 class Parking(models.Model):
     id_parking = models.IntegerField()
@@ -81,3 +83,12 @@ class Parking(models.Model):
 
     stand_entry = models.ForeignKey(Stand, on_delete=models.CASCADE, related_name="stand_entry")
     stand_exit = models.ForeignKey(Stand, on_delete=models.CASCADE, related_name="stand_exit")
+
+    def __str__(self):
+        return str(self.id_parking)
+
+
+class ParkingNotification(models.Model):
+    parking = models.ForeignKey(Parking, on_delete=models.CASCADE)
+    message = models.CharField(max_length=255)
+

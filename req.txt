@@ -1,1 +1,5 @@
-python-escpos
+django
+djangorestframework
+paramiko
+dataclasses-json
+telebot
