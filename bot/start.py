@@ -8,7 +8,7 @@ import telebot
 
 from Core import TelegramApi
 from Core.keyboards import Keyboards
-from bot.Core.serializers import StandType, SHHAction, statusForBot, LogsAction
+from Core.serializers import StandType, SHHAction, statusForBot, LogsAction
 from interface import Texts, generateErrorNotification
 from settings import url_django_tg_server, tg_secret_key
 

@@ -2,4 +2,4 @@ django
 djangorestframework
 paramiko
 dataclasses-json
-telebot
+pytelegrambotapi
