@@ -1,5 +1,5 @@
 [Unit]
-Description=ParkingCore
+Description=Server For Get/Set Settings
 
 [Service]
 Type=simple
@@ -7,8 +7,8 @@ Type=simple
 Restart=always
 RestartSec=1
 
-WorkingDirectory=/home/pi/a1parkV2-tg/server
-ExecStart=/usr/bin/sudo /usr/bin/python3 -u manage.py runserver 0.0.0.0:2203
+WorkingDirectory=/home/a1/a1parkV2-tg/server
+ExecStart=/usr/bin/python3 manage.py runserver 0.0.0.0:2203
 
 
 [Install]

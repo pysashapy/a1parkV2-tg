@@ -1,5 +1,5 @@
 [Unit]
-Description=ParkingCore
+Description=Telegram Bot
 
 [Service]
 Type=simple
@@ -7,7 +7,7 @@ Type=simple
 Restart=always
 RestartSec=1
 
-WorkingDirectory=/home/pi/a1parkV2-tg/bot
+WorkingDirectory=/home/a1/a1parkV2-tg/bot
 ExecStart=/usr/bin/sudo /usr/bin/python3 start.py
 
 [Install]
