@@ -1,0 +1,15 @@
+[Unit]
+Description=ParkingCore
+
+[Service]
+Type=simple
+
+Restart=always
+RestartSec=1
+
+WorkingDirectory=/home/pi/a1parkV2-tg/server
+ExecStart=/usr/bin/sudo /usr/bin/python3 -u manage.py runserver 0.0.0.0:2203
+
+
+[Install]
+WantedBy=multi-user.target
