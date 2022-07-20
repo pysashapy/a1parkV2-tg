@@ -136,6 +136,4 @@ class ParkingView(APIView):
 class ParkingIdsView(APIView):
     def get(self, request):
         parkings = list(Parking.objects.all())
-        if parkings[0]:
-            return Response([parking.id_parking for parking in parkings])
-        return Response([], status=status.HTTP_404_NOT_FOUND)
+        return Response([parking.id_parking for parking in parkings])
