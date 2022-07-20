@@ -11,4 +11,4 @@ WorkingDirectory=/home/pi/a1parkV2-tg/bot
 ExecStart=/usr/bin/sudo /usr/bin/python3 start.py
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=server_settings.service
