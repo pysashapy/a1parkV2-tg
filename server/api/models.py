@@ -16,7 +16,7 @@ class User(models.Model):
 class StandSettings(models.Model):
     name_profile = models.CharField(max_length=255, default='a')
 
-    type_connect = ((True, 'Type NO'), (False, 'Type NC'))
+    type_connect = ((False, 'Type NO'), (True, 'Type NC'))
     """time signal"""
     delay_barrier = models.FloatField(default=0.5)
 
