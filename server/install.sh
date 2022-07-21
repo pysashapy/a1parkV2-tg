@@ -4,12 +4,13 @@ project_domain=""
 project_port=80
 project_path=`pwd`
 
+
 read -p "Python interpreter: " base_python_interpreter
 read -p "Your domain/ip without protocol (for example, google.com): " project_domain
 read -p "Your port: " project_port
 
-`$base_python_interpreter -m venv env`
-source env/bin/activate
+sudo apt-get install python3-pip nginx
+
 pip3 install -r req.txt
 
 sed -i "s~dbms_template_path~$project_path~g" nginx/site.conf systemd/gunicorn.service
@@ -17,12 +18,12 @@ sed -i "s~replace_domain~$project_domain~g" nginx/site.conf src/settings/setting
 sed -i "s~80~$project_port~g" nginx/site.conf
 
 # setup django
-echo src/manage.py migrate
-echo src/manage.py makemigrations
-echo src/manage.py migrate
+python3 src/manage.py migrate
+python3 src/manage.py makemigrations
+python3 src/manage.py migrate
 
 echo "Create superuser:"
-echo src/manage.py createsuperuser
+python3 src/manage.py createsuperuser
 
 # autostart setup
 
