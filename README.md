@@ -70,7 +70,7 @@ nano settings.py
 
 В файле settings.py должно быть: 
 ```python
-url_django_tg_server = 'http://IP:PORT/'  # url:port
+url_django_tg_server = 'http://IP:2203/'  # url:port
 tg_secret_key = 'TOKEN BOT'
 ```
 
