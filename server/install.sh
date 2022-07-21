@@ -30,6 +30,7 @@ python3 src/manage.py createsuperuser
 # autostart setup
 
 sudo ln -s $project_path/nginx/site.conf /etc/nginx/sites-enabled/
+sudo ln -s $project_path/systemd/gunicorn.socket /etc/systemd/system/
 sudo ln -s $project_path/systemd/gunicorn.service /etc/systemd/system/
 
 sudo systemctl daemon-reload
