@@ -1,11 +1,11 @@
 #!/bin/bash
-base_python_interpreter=""
+base_python_interpreter="/usr/bin/python3"
 project_domain=""
 project_port=80
 project_path=`pwd`
 
 
-read -p "Python interpreter: " base_python_interpreter
+echo "Python interpreter: " base_python_interpreter
 read -p "Your domain/ip without protocol (for example, google.com): " project_domain
 read -p "Your port: " project_port
 
