@@ -40,9 +40,12 @@ cd server
 ```
 
 ```bash
-python3 manage.py migrate
-python3 manage.py makemigrations
-python3 manage.py migrate
+cd ~
+sudo rm -rf a1parkV2-tg
+git clone https://github.com/pysashapy/a1parkV2-tg.git
+cd a1parkV2-tg/server
+chmod +x install.sh
+./install.sh
 ```
 
 ### Создание Учётной Записи Администратора
