@@ -10,6 +10,8 @@ read -p "Your domain/ip without protocol (for example, google.com): " project_do
 read -p "Your port: " project_port
 
 sudo apt-get install python3-pip nginx
+virtualenv -p /usr/bin/python3 env
+source env/bin/activate
 
 pip3 install -r req.txt
 
