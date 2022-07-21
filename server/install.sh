@@ -25,6 +25,7 @@ sed -i "s~80~$project_port~g" nginx/site.conf
 python3 src/manage.py migrate
 python3 src/manage.py makemigrations
 python3 src/manage.py migrate
+python3 src/manage.py collectstatic
 
 echo "Create superuser:"
 python3 src/manage.py createsuperuser
