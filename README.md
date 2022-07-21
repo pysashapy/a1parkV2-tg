@@ -54,7 +54,7 @@ python3 manage.py createsuperuser
 Переходим на - http://ip:port/admin
 
 
-## Автостарт Сервера
+### Автостарт Сервера
 ```bash
 sudo cp server_settings.service /etc/systemd/system/
 sudo systemctl enable server_settings
@@ -74,7 +74,7 @@ url_django_tg_server = 'http://IP:PORT/'  # url:port
 tg_secret_key = 'TOKEN BOT'
 ```
 
-## Автостарт Бота
+### Автостарт Бота
 ```bash
 sudo cp tg.service /etc/systemd/system/
 sudo systemctl enable tg
