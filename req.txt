@@ -1,5 +1,3 @@
-django
-djangorestframework
-paramiko
 dataclasses-json
 pytelegrambotapi
+requests
