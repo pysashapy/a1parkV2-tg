@@ -3,3 +3,4 @@ gunicorn
 djangorestframework
 dataclasses-json
 paramiko
+whitenoise
