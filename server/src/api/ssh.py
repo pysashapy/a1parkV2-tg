@@ -60,8 +60,13 @@ class StandCommands:
         return self.ssh.customCommand(f'python3 {self.settings.path_manage} --loggingOS take --count {count}')
 
     def clearLogs(self) -> tuple[str, bool]:
-        return self.ssh.customCommand(f'python3 {self.settings.path_manage} --loggingOS delete')
+        return self.ssh.customCommand(f'sudo python3 {self.settings.path_manage} --loggingOS delete', pswd=True)
 
     def getStatus(self) -> tuple[str, bool]:
         out_ssh = self.ssh.customCommand(f'python3 {self.settings.path_manage} --status p')
         return out_ssh
+
+
+if __name__ == '__main__':
+    cl = ClientSSH('89.17.58.114', 8701, 'pi', 'ktcq4wlj26z5d8v')
+    print(cl.customCommand(f'sudo python3 a1parkV2-stand/manage.py --loggingOS delete', pswd=True))
