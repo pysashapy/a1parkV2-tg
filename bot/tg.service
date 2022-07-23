@@ -8,7 +8,7 @@ Restart=always
 RestartSec=1
 
 WorkingDirectory=/home/a1/a1parkV2-tg/bot
-ExecStart=/usr/bin/sudo /usr/bin/python3 start.py
+ExecStart=/usr/bin/python3 start.py
 
 [Install]
-WantedBy=server_settings.service
+WantedBy=gunicorn.service

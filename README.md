@@ -47,7 +47,10 @@ http://IP:PORT/admin
 
 ## Настройка Бота
 ```bash
-nano ~/a1parkV2-tg/server/bot/settings.py
+pip3 install -r ~/a1parkV2-tg/req.txt
+```
+```bash
+nano ~/a1parkV2-tg/bot/settings.py
 ```
 
 В файле settings.py должно быть: 
