@@ -9,8 +9,7 @@ echo "Python interpreter: " base_python_interpreter
 read -p "Your domain/ip without protocol (for example, google.com): " project_domain
 read -p "Your port: " project_port
 
-sudo apt-get install python3-pip nginx
-pip3 install virtualenv
+sudo apt-get install python3-pip nginx python3-virtualenv
 
 virtualenv -p /usr/bin/python3 env
 source env/bin/activate
