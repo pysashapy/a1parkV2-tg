@@ -16,6 +16,7 @@ Settings => Developer Settings => Personal Access Token => Generate New Token (G
 
 ### Клонирование репозитория
 ```bash
+cd ~
 git clone https://github.com/pysashapy/a1parkV2-tg.git
 cd a1parkV2-tg
 ```
@@ -35,52 +36,32 @@ sudo timedatectl set-timezone 'Europe/Moscow'
 ```
 
 ## Настройка Сервера
-```bash
-cd server
-```
 
 ```bash
-cd ~
-sudo rm -rf a1parkV2-tg
-git clone https://github.com/pysashapy/a1parkV2-tg.git
 cd a1parkV2-tg/server
 chmod +x install.sh
 ./install.sh
 ```
-
-### Создание Учётной Записи Администратора
-```bash
-python3 manage.py createsuperuser
-```
-
-### Создание Новой парковки
-Переходим на - http://ip:port/admin
-
-
-### Автостарт Сервера
-```bash
-sudo cp server_settings.service /etc/systemd/system/
-sudo systemctl enable server_settings
-sudo systemctl start server_settings
-sudo reboot
-```
+Помере продвижения спросит IP, PORT а так же данные для создание Профиля Администратора.
+http://IP:PORT/admin
 
 ## Настройка Бота
 ```bash
-cd bot
-nano settings.py
+nano ~/a1parkV2-tg/server/bot/settings.py
 ```
 
 В файле settings.py должно быть: 
 ```python
-url_django_tg_server = 'http://IP:2203/'  # url:port
+url_django_tg_server = 'http://IP:PORT/'  # url:port которые вводили при настройке сервера
 tg_secret_key = 'TOKEN BOT'
 ```
 
 ### Автостарт Бота
 ```bash
+cd ~/a1parkV2-tg/server/bot
 sudo cp tg.service /etc/systemd/system/
 sudo systemctl enable tg
 sudo systemctl start tg
 sudo reboot
 ```
+
