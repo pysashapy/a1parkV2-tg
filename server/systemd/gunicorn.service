@@ -4,7 +4,6 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-Group=root
 WorkingDirectory=dbms_template_path/src
 ExecStart=dbms_template_path/env/bin/gunicorn \
           --access-logfile - \
